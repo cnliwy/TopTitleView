@@ -1,7 +1,7 @@
 # TopTitleView<br>
 顶部标题栏使用说明 <br>
 ===
-##第一种:LiwyTop<br>
+###第一种:LiwyTop<br>
         liwyTop = (LiwyTop)findViewById(R.id.liwytop);<br>
         //配置类(配置控件样式,可配置详情可查看ConfigTop类) 如果设置属性满足了不来各位客官，各位客官只能再扩充点了<br>
         // 配置1<br>
@@ -22,10 +22,9 @@
       liwyTop.setConfig(config);<br>
  如果左侧按钮既设置了文字又设置了图片，则以图片优先级为主。右侧按钮同理。<br>
  
- ##第二种:ToolBar的封装实现，适合在封装在Activity的基类里面继承使用<br>
- =
+ ###第二种:ToolBar的封装实现，适合在封装在Activity的基类里面继承使用<br>
    首先在布局里引入<br>
-   <include layout="@layout/toolbar_layout"></include><br>
+   <include layout="@layout/toolbar_layout"></include><br>
    然后初始化标题栏<br>
    initToolBar();<br>
    最后设置标题栏内容 分别提供了一下四种方法（setToolbarTitle和setToolbarWithBack为设置标题和左侧内容的方法）<br>

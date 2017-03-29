@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.liwy.toptitleview.view1.TopActivity;
+import com.liwy.toptitleview.view2.ToolBarActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Button btn1;
@@ -31,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, ToolBarActivity.class);
+                startActivity(intent);
             }
         });
 

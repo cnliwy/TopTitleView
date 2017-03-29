@@ -15,7 +15,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
     android:textColor="#ffffff"
     android:text="标题栏一" />
 
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="130dp"
         android:textColor="#ffffff"
         android:text="标题栏二" />
 </RelativeLayout>

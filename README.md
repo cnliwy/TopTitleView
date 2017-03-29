@@ -1,7 +1,7 @@
 # TopTitleView<br>
 顶部标题栏使用说明 <br>
 ===
-第一种:LiwyTop<br>==
+第一种:LiwyTop<br>
         liwyTop = (LiwyTop)findViewById(R.id.liwytop);<br>
         //配置类(配置控件样式,可配置详情可查看ConfigTop类) 如果设置属性满足了不来各位客官，各位客官只能再扩充点了<br>
         // 配置1<br>

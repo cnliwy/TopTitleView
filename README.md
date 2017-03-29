@@ -23,6 +23,7 @@
  如果左侧按钮既设置了文字又设置了图片，则以图片优先级为主。右侧按钮同理。<br>
  
  ##第二种:ToolBar的封装实现，适合在封装在Activity的基类里面继承使用<br>
+ =
    首先在布局里引入<br>
    <include layout="@layout/toolbar_layout"></include><br>
    然后初始化标题栏<br>
@@ -30,16 +31,16 @@
    最后设置标题栏内容 分别提供了一下四种方法（setToolbarTitle和setToolbarWithBack为设置标题和左侧内容的方法）<br>
    （setToolbarRight和setToolbarRight为设置右侧内容的方法）<br>
         setToolbarTitle(TOOLBAR_MODE_CENTER,"主页");<br>
-//        setToolbarWithBack(TOOLBAR_MODE_LEFT, "主页", R.drawable.btn_back, new OnLeftClickListener() {<br>
-//            @Override<br>
-//            public void onLeftClick() {<br>
-//                System.out.println("点击了返回");<br>
-//            }<br>
-//        });<br>
-//        setToolbarRight("更多", new OnRightClickListener() {<br>
-//            @Override<br>
-//            public void onRightClick() {<br>
-//                System.out.println("点击了更多");<br>
-//            }<br>
-//        });<br>
-//        setToolbarRight(R.drawable.btn_back,null);<br>
+        setToolbarWithBack(TOOLBAR_MODE_LEFT, "主页", R.drawable.btn_back, new OnLeftClickListener() {<br>
+           @Override<br>
+           public void onLeftClick() {<br>
+                System.out.println("点击了返回");<br>
+            }<br>
+        });<br>
+        setToolbarRight("更多", new OnRightClickListener() {<br>
+            @Override<br>
+            public void onRightClick() {<br>
+                System.out.println("点击了更多");<br>
+            }<br>
+        });<br>
+        setToolbarRight(R.drawable.btn_back,null);<br>

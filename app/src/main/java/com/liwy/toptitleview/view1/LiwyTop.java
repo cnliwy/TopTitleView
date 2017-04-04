@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import static android.R.attr.left;
+
 /**
  * 标题栏
  * 备注:需先传入ConfigTop的实例对象.然后再调用setLiwyTop方法初始化标题栏.
@@ -142,7 +144,11 @@ public class LiwyTop extends LinearLayout {
             left.setCompoundDrawablesWithIntrinsicBounds(d,null,null,null);//设置左侧按钮
         }
         left.setTextColor(config.getTitleTextColor());
-        left.setPadding(40,0,0,0);//按钮内容向左移动20
+        if(config.getLeftContentMargin() == 0) {
+            left.setPadding(40, 0, 0, 0);//按钮内容向左移动20
+        }else{
+            left.setPadding(config.getLeftContentMargin(),0,0,0);
+        }
         left.setTextSize(config.getButtonTitleSize());
         left.setBackgroundColor(ConfigTop.transprent);
         left.setOnClickListener(LeftButtonOnClickListener);
@@ -182,7 +188,12 @@ public class LiwyTop extends LinearLayout {
             }
             right.setCompoundDrawablesWithIntrinsicBounds(null,null,d,null);//设置左侧按钮
         }
-        right.setPadding(0,0,40,0);//按钮内容向左移动20
+
+        if(config.getRightContentMargin() == 0) {
+            right.setPadding(0,0,40,0);//按钮内容向左移动20
+        }else{
+            right.setPadding(0,0,config.getRightContentMargin(),0);
+        }
         right.setTextColor(config.getTitleTextColor());
         right.setTextSize(config.getButtonTitleSize());
         right.setBackgroundColor(ConfigTop.transprent);
